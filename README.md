@@ -25,6 +25,7 @@ docker compose up --build
 
 O container do backend instala dependencias, gera `APP_KEY`, roda migrations e seed automaticamente no startup.
 O container do frontend aguarda o backend concluir a inicializacao para ficar disponivel, entao e esperado que ele apareca alguns instantes depois na primeira subida.
+Na primeira execucao o backend pode levar alguns minutos enquanto instala dependencias PHP dentro do container antes de ficar saudavel.
 
 ## Estrutura
 

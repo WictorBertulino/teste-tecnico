@@ -24,6 +24,7 @@ docker compose up --build
 - Backend API: [http://localhost:8000/api/v1/products](http://localhost:8000/api/v1/products)
 
 O container do backend instala dependencias, gera `APP_KEY`, roda migrations e seed automaticamente no startup.
+O container do frontend aguarda o backend concluir a inicializacao para ficar disponivel, entao e esperado que ele apareca alguns instantes depois na primeira subida.
 
 ## Estrutura
 

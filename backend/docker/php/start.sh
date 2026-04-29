@@ -15,9 +15,13 @@ if ! grep -q "^APP_KEY=base64:" .env; then
   php artisan key:generate --force
 fi
 
+rm -f storage/framework/backend-ready
+
 until php artisan migrate --seed --force; do
   echo "Aguardando banco de dados..."
   sleep 3
 done
+
+touch storage/framework/backend-ready
 
 php-fpm
